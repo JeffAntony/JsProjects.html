@@ -1,0 +1,159 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border:2px solid black;
+            /* margin: auto; */
+            /* display: flex;
+            justify-content: center;
+            display:grid;
+            
+            padding:20px 5px; 
+            grid-template-columns: 1fr 1fr 1fr;  */
+             /* grid-template-rows: 2fr 2fr 2fr;  */
+        }
+        .box1{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        .inner{
+             border: 2px solid black;
+             padding: 70px;
+            margin: 10px 5px;
+             
+        }
+        .innerbox{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+            padding:10px 5px;
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+            
+            
+        }
+        #inp1{
+            width:100%;
+            /* padding: 10px ; */
+            
+        }
+        #inp2{
+            width:100%;
+        }
+        #inp3{
+            width:100%;
+        }
+        .in{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .inp{
+            width:70%;
+            margin-right:30px;
+            padding-left:5px;
+            margin-left: 10px;
+            
+        }
+        #sub{
+            width:60%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <input class="inp" type="text" placeholder="enter the colour">
+    <input class="inp" typ="number" placeholder="enter any digit">
+    <button id="sub"> submit</button> -->
+    <div class="box">
+        <div class="innerbox">
+        <div id="inp1"> <input id="inp" type="text" placeholder="enter the colour"> </div>
+           <div id="inp2"> <input id="ip" typ="number" placeholder="enter any digit"> </div>
+          <div id="inp3">  <button id="sub"> submit</button> </div>
+        </div>
+          
+        <!-- <input class="inp" type="text" placeholder="enter the colour">
+    <input class="inp" typ="number" placeholder="enter any digit">
+    <button id="sub"> submit</button> -->
+    <div class="in">
+        <div class="inner" id = "1"></div>
+        <div class="inner"id ="2" ></div>
+        <div class="inner" id="3"></div>
+        <div class="inner" id="4"></div>
+        <div class="inner" id="5"></div>
+         <div class="inner" id="6"></div> 
+         <div class="inner" id="7"></div>
+        <div class="inner" id="8"></div>
+         
+        </div>
+        <!-- <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+         <div class="inner"></div> -->
+        <!-- <div class="inner"></div>
+        <div class="inner"></div> --> 
+    </div>
+    <script>
+    //   document.getElementById("sub").onclick=function()
+    //         {
+    //           let v=document.getElementById("inp").value;
+    //           let c=document.getElementById("ip").value;
+    //           document.querySelector("#inp").value = "";
+    //           document.querySelector("#ip").value = "";
+
+              
+    //           let div=document.querySelectorAll(".inner");
+
+    //           if(div.length>8)
+    //           {
+    //             alert('invalid number');
+    //           }
+    //           else{
+                
+    //              for(let g of div)
+    //             //  console.log(v)
+    //             //     console.log(c)
+    //             //     console.log(div)
+
+    //             if(g.id==='inner'+c)
+    //             {
+    //                 g.style.backgroundColor = v; 
+                   
+    //             }
+              
+    //           }
+
+    //         }
+
+    document.getElementById("sub").onclick = function () {
+    let v = document.getElementById("inp").value;
+    let c = document.getElementById("ip").value;
+    console.log("heelo")
+    // document.querySelector("#inp").value = "";
+    // document.querySelector("#ip").value = "";
+
+    console.log(v,c)
+
+    let div = document.querySelectorAll(".inner");
+    console.log(div)
+
+    if (div.length > 8) {
+        alert('invalid number of elements');
+    } else {
+        for (let g of div) 
+        {
+            if (g.id == c) 
+            {
+                g.style.backgroundColor = v;
+            }
+        }
+    }
+}
+
+    </script>
+</body>
+</html>
